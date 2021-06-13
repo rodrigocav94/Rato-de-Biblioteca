@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9F18389726756E0600610060 /* AdicionarLivroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F18389626756E0600610060 /* AdicionarLivroView.swift */; };
 		9F2021E4267514D9009C1B87 /* Rato_de_BibliotecaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2021E3267514D9009C1B87 /* Rato_de_BibliotecaApp.swift */; };
 		9F2021E6267514D9009C1B87 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2021E5267514D9009C1B87 /* ContentView.swift */; };
 		9F2021E8267514DA009C1B87 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F2021E7267514DA009C1B87 /* Assets.xcassets */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9F18389626756E0600610060 /* AdicionarLivroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdicionarLivroView.swift; sourceTree = "<group>"; };
 		9F2021E0267514D9009C1B87 /* Rato de Biblioteca.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Rato de Biblioteca.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F2021E3267514D9009C1B87 /* Rato_de_BibliotecaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rato_de_BibliotecaApp.swift; sourceTree = "<group>"; };
 		9F2021E5267514D9009C1B87 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 			children = (
 				9F2021E3267514D9009C1B87 /* Rato_de_BibliotecaApp.swift */,
 				9F2021E5267514D9009C1B87 /* ContentView.swift */,
+				9F18389626756E0600610060 /* AdicionarLivroView.swift */,
 				9F2021E7267514DA009C1B87 /* Assets.xcassets */,
 				9F2021EC267514DA009C1B87 /* Persistence.swift */,
 				9F2021EE267514DA009C1B87 /* Rato_de_Biblioteca.xcdatamodeld */,
@@ -264,6 +267,7 @@
 				9F2021E6267514D9009C1B87 /* ContentView.swift in Sources */,
 				9F2021F0267514DA009C1B87 /* Rato_de_Biblioteca.xcdatamodeld in Sources */,
 				9F2021E4267514D9009C1B87 /* Rato_de_BibliotecaApp.swift in Sources */,
+				9F18389726756E0600610060 /* AdicionarLivroView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

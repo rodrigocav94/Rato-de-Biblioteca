@@ -16,6 +16,8 @@
 		9F2021F0267514DA009C1B87 /* Rato_de_Biblioteca.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9F2021EE267514DA009C1B87 /* Rato_de_Biblioteca.xcdatamodeld */; };
 		9F2021FA267514DA009C1B87 /* Rato_de_BibliotecaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2021F9267514DA009C1B87 /* Rato_de_BibliotecaTests.swift */; };
 		9F202204267514DA009C1B87 /* Rato_de_BibliotecaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F202203267514DA009C1B87 /* Rato_de_BibliotecaUITests.swift */; };
+		9F2459D326764FAF001C3EEF /* NotaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2459D226764FAF001C3EEF /* NotaView.swift */; };
+		9F2459D526765B40001C3EEF /* EmojiNotaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2459D426765B40001C3EEF /* EmojiNotaView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +50,8 @@
 		9F2021F9267514DA009C1B87 /* Rato_de_BibliotecaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rato_de_BibliotecaTests.swift; sourceTree = "<group>"; };
 		9F2021FF267514DA009C1B87 /* Rato de BibliotecaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Rato de BibliotecaUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F202203267514DA009C1B87 /* Rato_de_BibliotecaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rato_de_BibliotecaUITests.swift; sourceTree = "<group>"; };
+		9F2459D226764FAF001C3EEF /* NotaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotaView.swift; sourceTree = "<group>"; };
+		9F2459D426765B40001C3EEF /* EmojiNotaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiNotaView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +104,8 @@
 			children = (
 				9F2021E3267514D9009C1B87 /* Rato_de_BibliotecaApp.swift */,
 				9F2021E5267514D9009C1B87 /* ContentView.swift */,
+				9F2459D426765B40001C3EEF /* EmojiNotaView.swift */,
+				9F2459D226764FAF001C3EEF /* NotaView.swift */,
 				9F18389626756E0600610060 /* AdicionarLivroView.swift */,
 				9F2021E7267514DA009C1B87 /* Assets.xcassets */,
 				9F2021EC267514DA009C1B87 /* Persistence.swift */,
@@ -265,7 +271,9 @@
 			files = (
 				9F2021ED267514DA009C1B87 /* Persistence.swift in Sources */,
 				9F2021E6267514D9009C1B87 /* ContentView.swift in Sources */,
+				9F2459D326764FAF001C3EEF /* NotaView.swift in Sources */,
 				9F2021F0267514DA009C1B87 /* Rato_de_Biblioteca.xcdatamodeld in Sources */,
+				9F2459D526765B40001C3EEF /* EmojiNotaView.swift in Sources */,
 				9F2021E4267514D9009C1B87 /* Rato_de_BibliotecaApp.swift in Sources */,
 				9F18389726756E0600610060 /* AdicionarLivroView.swift in Sources */,
 			);

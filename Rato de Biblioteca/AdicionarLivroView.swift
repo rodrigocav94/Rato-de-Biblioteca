@@ -34,13 +34,8 @@ struct AdicionarLivroView: View {
                 }
 
                 Section {
-                    Picker("Nota", selection: $nota) {
-                        ForEach(0..<6) {
-                            Text("\($0)")
-                        }
-                    }
-
-                    TextField("Escreve uma análise para o filme", text: $analise)
+                    NotaView(nota: $nota)
+                    TextField("Escreve uma análise para o livro", text: $analise)
                 }
 
                 Section {

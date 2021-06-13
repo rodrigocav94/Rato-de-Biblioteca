@@ -16,13 +16,32 @@ struct ContentView: View {
     
     var body: some View {
         NavigationView {
-           Text("Conta: \(livros.count)")
+            List {
+                ForEach(livros, id: \.self) { livro in
+                    NavigationLink(destination: Text(livro.titulo ?? "Título Desconhecido")) {
+                        
+                        EmojiNotaView(nota: livro.nota)
+                            .font(.largeTitle)
+                        VStack(alignment: .leading) {
+                            Text(livro.titulo ?? "Titulo Desconhecido")
+                                .font(.headline)
+                            Text(livro.autor ?? "Autor Desconhecido")
+                                .foregroundColor(.secondary)
+                            
+                        }
+                    }
+                }
+            }
                .navigationBarTitle("Rato de Biblioteca")
-               .navigationBarItems(trailing: Button(action: {
-                   self.mostrandoTela.toggle()
-               }) {
-                   Image(systemName: "plus")
-               })
+               .toolbar {
+                   ToolbarItem(placement: .navigationBarTrailing) {
+                       Button(action: {
+                           self.mostrandoTela.toggle()
+                       }) {
+                           Image(systemName: "plus")
+                       }
+                   }
+               }
                .sheet(isPresented: $mostrandoTela) {
                    AdicionarLivroView().environment(\.managedObjectContext, self.moc)
                }

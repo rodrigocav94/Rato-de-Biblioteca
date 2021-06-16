@@ -10,7 +10,7 @@ import CoreData
 
 struct ContentView: View {
     @Environment(\.managedObjectContext) var moc
-    @FetchRequest(entity: Livro.entity(), sortDescriptors: []) var livros: FetchedResults<Livro>
+    @FetchRequest(entity: Livro.entity(), sortDescriptors: [NSSortDescriptor(keyPath: \Livro.titulo, ascending: true), NSSortDescriptor(keyPath: \Livro.autor, ascending: true)]) var livros: FetchedResults<Livro>
     
     @State private var mostrandoTela = false
     
@@ -31,6 +31,7 @@ struct ContentView: View {
                         }
                     }
                 }
+                .onDelete(perform: deletarLivro)
             }
                .navigationBarTitle("Rato de Biblioteca")
                .toolbar {
@@ -41,11 +42,27 @@ struct ContentView: View {
                            Image(systemName: "plus")
                        }
                    }
+                   ToolbarItem(placement: .navigationBarLeading) {
+                       EditButton()
+                   }
                }
                .sheet(isPresented: $mostrandoTela) {
                    AdicionarLivroView().environment(\.managedObjectContext, self.moc)
                }
        }
+    }
+    
+    func deletarLivro(at offsets: IndexSet) {
+        for offset in offsets {
+            // encontrar o livro na fetch request
+            let livro = livros[offset]
+
+            // deletar do context
+            moc.delete(livro)
+        }
+
+        // salvar o context
+        try? moc.save()
     }
 }
 

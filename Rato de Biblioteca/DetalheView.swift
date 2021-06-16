@@ -10,6 +10,9 @@ import CoreData
 
 
 struct DetalheView: View {
+    @Environment(\.managedObjectContext) var moc
+    @Environment(\.presentationMode) var presentationMode
+    @State private var mostrandoAlertaDeletar = false
     let livro: Livro
     
     var body: some View {
@@ -42,6 +45,26 @@ struct DetalheView: View {
             }
         }
         .navigationBarTitle(Text(livro.titulo ?? "Livro Desconhecido"), displayMode: .inline)
+        .toolbar {
+            ToolbarItem(placement: .navigationBarTrailing) {
+                Button(action: {
+                    self.mostrandoAlertaDeletar.toggle()
+                }) {
+                    Image(systemName: "trash")
+                }
+            }
+        }
+        .alert(isPresented: $mostrandoAlertaDeletar) {
+            Alert(title: Text("Deletar livro"), message: Text("Tem certeza?"), primaryButton: .destructive(Text("Deletar")) {
+                    self.deletarLivro()
+                }, secondaryButton: .cancel()
+            )
+        }
+    }
+    func deletarLivro() {
+        moc.delete(livro)
+        try? self.moc.save()
+        presentationMode.wrappedValue.dismiss()
     }
 }
 

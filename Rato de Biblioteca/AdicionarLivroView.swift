@@ -34,7 +34,7 @@ struct AdicionarLivroView: View {
                 }
 
                 Section {
-                    NotaView(nota: $nota)
+                    NotaView(nota: $nota, imagemDesligada: Image(systemName: "star"), corLigada: .blue)
                     TextField("Escreve uma análise para o livro", text: $analise)
                 }
 
@@ -44,8 +44,13 @@ struct AdicionarLivroView: View {
                         novoLivro.titulo = self.titulo
                         novoLivro.autor = self.autor
                         novoLivro.nota = Int16(self.nota)
-                        novoLivro.genero = self.genero
+                        if self.genero != "" {
+                            novoLivro.genero = self.genero
+                        } else {
+                            novoLivro.genero = "Gênero não especificado"
+                        }
                         novoLivro.analise = self.analise
+                        novoLivro.data = Date()
 
                         try? self.moc.save()
                         

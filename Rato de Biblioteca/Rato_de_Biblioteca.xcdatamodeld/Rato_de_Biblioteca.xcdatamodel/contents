@@ -3,12 +3,13 @@
     <entity name="Livro" representedClassName="Livro" syncable="YES" codeGenerationType="class">
         <attribute name="analise" optional="YES" attributeType="String"/>
         <attribute name="autor" optional="YES" attributeType="String"/>
+        <attribute name="data" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="genero" optional="YES" attributeType="String"/>
         <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="nota" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="titulo" optional="YES" attributeType="String"/>
     </entity>
     <elements>
-        <element name="Livro" positionX="-63" positionY="-18" width="128" height="133"/>
+        <element name="Livro" positionX="-63" positionY="-18" width="128" height="134"/>
     </elements>
 </model>

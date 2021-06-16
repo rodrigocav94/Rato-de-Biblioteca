@@ -34,11 +34,14 @@ struct DetalheView: View {
                 Text(self.livro.autor ?? "Autor Desconhecido")
                     .font(.title)
                     .foregroundColor(.secondary)
+                
+                Text(mostrarData(data: livro.data ?? Date()))
+                    .foregroundColor(.secondary)
 
                 Text(self.livro.analise ?? "Sem análise")
                     .padding()
 
-                NotaView(nota: .constant(Int(self.livro.nota)))
+                NotaView(nota: .constant(Int(self.livro.nota)), imagemDesligada: Image(systemName: "star"), corLigada: .blue)
                     .font(.largeTitle)
 
                 Spacer()
@@ -65,6 +68,14 @@ struct DetalheView: View {
         moc.delete(livro)
         try? self.moc.save()
         presentationMode.wrappedValue.dismiss()
+    }
+    func mostrarData(data: Date) -> String {
+        let formatter = DateFormatter()
+        formatter.dateStyle = .long
+        formatter.timeStyle = .none
+        formatter.locale = Locale(identifier: "pt_BR")
+        let dateString = formatter.string(from: Date())
+        return "Adicionado em " + dateString
     }
 }
 
